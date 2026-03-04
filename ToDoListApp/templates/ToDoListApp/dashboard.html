@@ -1,0 +1,43 @@
+{% extends "ToDoListApp/base.html" %}
+
+{% block title %}Dashboard{% endblock %}
+
+{% block content %}
+
+<div class="container text-center text-white mt-5">
+
+    <h1 class="mb-3">
+        Hi {{ username }}, you have successfully logged in!
+    </h1>
+
+    <h2 class="mb-4">Welcome to your Dashboard!</h2>
+
+    <p>This is where you can manage your tasks and profile.</p>
+
+    <hr class="bg-light">
+
+    {% if users %}
+    {% for user in users %}
+    <div class="mb-3">
+        <strong>ID:</strong> {{ user.id }} <br>
+        <strong>Username:</strong> {{ user.username }} <br>
+        <strong>Email:</strong> {{ user.email }} <br>
+    </div>
+    {% endfor %}
+    {% else %}
+    <p>No users found.</p>
+    {% endif %}
+
+    <div class="mt-4">
+        <a href="{% url 'add_task' %}" class="btn btn-outline-light me-3">
+            Add New Task
+        </a>
+
+        <a href="{% url 'update_profile' %}" class="btn btn-outline-light">
+            Update Profile
+        </a>
+    </div>
+
+</div>
+
+{% endblock %}

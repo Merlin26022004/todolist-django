@@ -1,0 +1,22 @@
+{% extends "ToDoListApp/base.html" %}
+
+{% block title %}Update Profile{% endblock %}
+
+{% block content %}
+<div class="container h-100 d-flex justify-content-center align-items-center">
+    <div class="col-md-4 bg-dark bg-opacity-50 p-4 rounded text-white">
+
+        <h2 class="text-center mb-4">Update Profile</h2>
+
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+
+            <button type="submit" class="btn btn-outline-light w-100">
+                Update
+            </button>
+        </form>
+
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,63 @@
+html,
+body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    background: linear-gradient(-45deg,
+            #1d2671,
+            #c33764,
+            #2bc0e4,
+            #f857a6);
+    background-size: 400% 400%;
+    animation: gradientBG 12s ease infinite;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+label {
+    margin-bottom: 6px;
+}
+
+@keyframes gradientBG {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+
+    background: linear-gradient(135deg,#8f94fb,#4ecdc4);
+
+    color:white;
+}
+
+h1{
+    font-size:48px;
+}
+
+.btn{
+    border-radius:30px;
+    padding:10px 25px;
+}
+
+.btn:hover{
+    transform:scale(1.05);
+    transition:0.2s;
+}
